@@ -4,4 +4,9 @@ class ResourceController < ApplicationController
 
   def show
   end
+
+  def new
+    @resource = Resource.new
+  end
+
 end

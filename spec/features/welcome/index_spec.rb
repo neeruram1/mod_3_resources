@@ -13,7 +13,7 @@ RSpec.describe 'Welcome Page' do
   it "I see a form to create a resource" do
     visit '/'
 
-    expect(page).to have_content('Add a Helpful Resource!')
-    expect(page).to have_link('Submit Your Findings')
+    expect(page).to have_content('Add a Resource')
+    expect(page).to have_button('Submit Your Findings')
   end
 end

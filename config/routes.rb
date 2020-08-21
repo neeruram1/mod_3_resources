@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'resource/index'
-  get 'resource/show'
+  resources :resource
   root 'welcome#index'
 end

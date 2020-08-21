@@ -3,22 +3,23 @@
 <h2>A site for current Turing Mod 3 students to catalog helpful articles and resources</h2>
 
 <section>
-  <%= form_for @resource do |f| %>
-    <%= f.label "Title" %>
-    <%= f.text_field :title %>
+  <h3>Add a Resource</h3>
+  <%= form_tag "/resource/new", method: :get do %>
+    <%= label_tag "Title" %>
+    <%= text_field_tag :title %>
 
-    <%= f.label "Url" %>
-    <%= f.text_field :link %>
+    <%= label_tag "Url" %>
+    <%= text_field_tag :link %>
 
-    <%= f.label "Category" %>
-    <%= f.text_field :category %>
+    <%= label_tag "Category" %>
+    <%= text_field_tag :category %>
 
-    <%= f.label "Website Name" %>
-    <%= f.text_field :source %>
+    <%= label_tag "Website Name" %>
+    <%= text_field_tag :source %>
 
-    <%= f.label "Related Project (if applicable)" %>
-    <%= f.text_field :project %>
+    <%= label_tag "Related Project (if applicable)" %>
+    <%= text_field_tag :project %>
 
-    <%= f.submit "Submit Your Findings" %>
+    <%= submit_tag "Submit Your Findings" %>
   <% end %>
 </section>
