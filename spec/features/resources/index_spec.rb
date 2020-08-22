@@ -66,35 +66,35 @@ RSpec.describe 'Resource index page' do
 
     visit '/resources'
 
-    within '.project-related' do
+    within '#project-related' do
       expect(page).to have_content(project_related.title)
     end
 
-    within '.official-docs' do
+    within '#official-docs' do
       expect(page).to have_content(official_docs.title)
     end
 
-    within '.tools' do
+    within '#tools' do
       expect(page).to have_content(tools.title)
     end
 
-    within '.misc' do
+    within '#misc' do
       expect(page).to have_content(misc.title)
     end
 
-    within '.rails' do
+    within '#rails' do
       expect(page).to have_content(rails.title)
     end
 
-    within '.ruby' do
+    within '#ruby' do
       expect(page).to have_content(ruby.title)
     end
 
-    within '.apis' do
+    within '#apis' do
       expect(page).to have_content(apis.title)
     end
 
-    within '.active-record' do
+    within '#active-record' do
       expect(page).to have_content(active_record.title)
     end
   end
