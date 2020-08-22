@@ -14,7 +14,7 @@ class ResourcesController < ApplicationController
       flash[:message] = "Thanks for being resourceful!"
     else
       redirect_to '/'
-      flash[:error] = resource.errors.full_message.to_sentance
+      flash[:error] = resource.errors.full_messages.to_sentence
     end
   end
 
