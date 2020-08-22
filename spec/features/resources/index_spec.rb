@@ -11,7 +11,7 @@ RSpec.describe 'Resource index page' do
 
     fill_in "Title", with: title
     fill_in 'URL', with: url
-    fill_in 'Category', with: category
+    select("#{category}", :from => "Category")
     fill_in 'Website Name', with: website
 
     click_on 'Submit Your Findings'
@@ -36,7 +36,7 @@ RSpec.describe 'Resource index page' do
 
     fill_in "Title", with: title
     fill_in 'URL', with: url
-    fill_in 'Category', with: category
+    select("#{category}", :from => "Category")
     fill_in 'Website Name', with: website
     fill_in 'Related Project (if applicable)', with: project
 

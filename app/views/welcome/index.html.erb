@@ -12,7 +12,7 @@
     <%= text_field_tag :link %>
 
     <%= label_tag :category, "Category" %>
-    <%= text_field_tag :category %>
+    <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true  %>
 
     <%= label_tag :source, "Website Name" %>
     <%= text_field_tag :source %>
