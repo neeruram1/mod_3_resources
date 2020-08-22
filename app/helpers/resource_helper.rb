@@ -30,4 +30,8 @@ module ResourceHelper
   def active_record_category(resources)
     resources.find_all {|resource| resource.category == 'ActiveRecord'}
   end
+
+  def testing_category(resources)
+    resources.find_all {|resource| resource.category == 'Testing'}
+  end
 end

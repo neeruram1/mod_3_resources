@@ -17,11 +17,33 @@
     <div class="row">
       <div class="col-xs-3">
         <h3 class='text-info'>Resourceful
+          <br><br>
           <small class="text-muted">A site for current Turing Mod 3 students to catalog helpful articles and resources</small>
         </h3>
-        <% flash.each do |type, message| %>
-          <p><%= message %></p>
-        <% end %>
+        <br><br>
+          <h4 class='text-info'>Find Resources by Category</h4>
+          <br>
+          <a href="resources#project-related">Project Related</a>
+          <br>
+          <a href="resources#official-docs">Official Documentation</a>
+          <br>
+          <a href="resources#tools">Tools</a>
+          <br>
+          <a href="resources#rails">Rails</a>
+          <br>
+          <a href="resources#ruby">Ruby</a>
+          <br>
+          <a href="resources#apis">APIs</a>
+          <br>
+          <a href="resources#active-record">ActiveRecord</a>
+          <br>
+          <a href="resources#active-record">Testing</a>
+          <br>
+          <a href="resources#active-record">Miscellaneous</a>
+          <br>
+          <% flash.each do |type, message| %>
+          <p class='text-danger'><%= message %></p>
+          <% end %>
       </div>
       <div class="col-xs-9">
         <%= yield %>

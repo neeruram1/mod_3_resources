@@ -1,8 +1,8 @@
 <h2 class='text-info'>Index</h2>
 <br>
 
- <section class='project-related'>
-   <h3 class="text-info"><u>Project Related</u></h3>
+ <section id='project-related'>
+   <h4 class="text-info"><u>Project Related</u></h4>
    <br>
    <% project_related_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -19,8 +19,8 @@
    <br>
  </section>
 
- <section class='official-docs'>
-   <h3 class="text-info"><u>Official Documentation</u></h3>
+ <section id='official-docs'>
+   <h4 class="text-info"><u>Official Documentation</u></h4>
    <br>
    <% official_docs_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -37,8 +37,8 @@
    <br>
  </section>
 
- <section class='tools'>
-   <h3 class="text-info"><u>Tools</u></h3>
+ <section id='tools'>
+   <h4 class="text-info"><u>Tools</u></h4>
    <br>
    <% tools_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -55,26 +55,8 @@
    <br>
  </section>
 
- <section class='misc'>
-   <h3 class="text-info"><u>Miscellaneous</u></h3>
-   <br>
-   <% misc_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
- </section>
-
- <section class='rails'>
-   <h3 class="text-info"><u>Rails</u></h3>
+ <section id='rails'>
+   <h4 class="text-info"><u>Rails</u></h4>
    <br>
    <% rails_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -91,8 +73,8 @@
    <br>
  </section>
 
- <section class='ruby'>
-   <h3 class="text-info"><u>Ruby</u></h3>
+ <section id='ruby'>
+   <h4 class="text-info"><u>Ruby</u></h4>
    <br>
    <% ruby_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -109,8 +91,8 @@
    <br>
  </section>
 
- <section class='apis'>
-   <h3 class="text-info"><u>APIs</u></h3>
+ <section id='apis'>
+   <h4 class="text-info"><u>APIs</u></h4>
    <br>
    <% apis_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -127,8 +109,8 @@
    <br>
  </section>
 
- <section class='active-record'>
-   <h3 class="text-info"><u>ActiveRecord</u></h3>
+ <section id='active-record'>
+   <h4 class="text-info"><u>ActiveRecord</u></h4>
    <br>
    <% active_record_category(@resources).each do |resource| %>
    <section id="resource-<%= resource.id %>">
@@ -142,5 +124,41 @@
      <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
     </section>
    <% end %>
+   <br>
+ </section>
+
+ <section id='testing'>
+   <h4 class="text-info"><u>Testing</u></h4>
+   <br>
+   <% testing_category(@resources).each do |resource| %>
+   <section id="resource-<%= resource.id %>">
+     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
+     <p><b>Website:</b> <%= resource.source %>
+     <p><b>Category:</b> <%= resource.category %>
+       <% if resource.project.empty? == false %>
+         <p><b>Related Project (if applicable):</b> <%= resource.project %>
+       <% end %>
+     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
+     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
+    </section>
+   <% end %>
+   <br>
+ </section>
+
+ <section id='misc'>
+   <h4 class="text-info"><u>Miscellaneous</u></h4>
+   <br>
+   <% misc_category(@resources).each do |resource| %>
+   <section id="resource-<%= resource.id %>">
+     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
+     <p><b>Website:</b> <%= resource.source %>
+     <p><b>Category:</b> <%= resource.category %>
+       <% if resource.project.empty? == false %>
+         <p><b>Related Project (if applicable):</b> <%= resource.project %>
+       <% end %>
+     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
+     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
+    </section>
+    <% end %>
    <br>
  </section>
