@@ -52,6 +52,51 @@ RSpec.describe 'Resource index page' do
     click_on 'Submit Your Findings'
 
     expect(current_path).to eq('/')
-    expect(page).to have_content("Title can't be blank, Link can't be blank, Category can't be blank, and Source can't be blank")
+    expect(page).to have_content("Title is required, Link is required, Category is required, and Source is required")
+  end
+
+  it "Groups resources by category" do
+    project_related = Resource.create(title: 'project', link: 'link', category: 'Project Related', source: 'source', project: 'project')
+    official_docs = Resource.create(title: 'official docs', link: 'link', category: 'Official Documentation', source: 'source', project: 'project')
+    tools = Resource.create(title: 'tools', link: 'link', category: 'Tools', source: 'source', project: 'project')
+    misc = Resource.create(title: 'misc', link: 'link', category: 'Miscellaneous', source: 'source', project: 'project')
+    rails = Resource.create(title: 'rails', link: 'link', category: 'Rails', source: 'source', project: 'project')
+    ruby = Resource.create(title: 'ruby', link: 'link', category: 'Ruby', source: 'source', project: 'project')
+    apis = Resource.create(title: 'apis', link: 'link', category: 'APIs', source: 'source', project: 'project')
+    active_record = Resource.create(title: 'active record', link: 'link', category: 'ActiveRecord', source: 'source', project: 'project')
+
+    visit '/resources'
+
+    within '.project-related' do
+      expect(page).to have_content(project_related.title)
+    end
+
+    within '.official-docs' do
+      expect(page).to have_content(official_docs.title)
+    end
+
+    within '.tools' do
+      expect(page).to have_content(tools.title)
+    end
+
+    within '.misc' do
+      expect(page).to have_content(misc.title)
+    end
+
+    within '.rails' do
+      expect(page).to have_content(rails.title)
+    end
+
+    within '.ruby' do
+      expect(page).to have_content(ruby.title)
+    end
+
+    within '.apis' do
+      expect(page).to have_content(apis.title)
+    end
+
+    within '.active-record' do
+      expect(page).to have_content(active_record.title)
+    end
   end
 end
