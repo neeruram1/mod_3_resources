@@ -3,7 +3,11 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
   end
 
-  def show
+  def destroy
+    resource = Resource.find(params[:id])
+    resource.destroy
+    redirect_to '/resources'
+    flash[:message] = "Resource has been removed. Byeeee"
   end
 
   def create
