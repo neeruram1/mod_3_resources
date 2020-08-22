@@ -1,19 +1,41 @@
-<h3>Add a Resource</h3>
-<%= form_tag "/resources?id=#{@resource.id}", method: :patch do %>
-  <%= label_tag :title, "Title" %>
-  <%= text_field_tag :title , @resource.title %>
+<h2 class='text-info'>Edit a Resource</h2>
 
-  <%= label_tag :link, "URL" %>
-  <%= text_field_tag :link, @resource.link %>
+<section class="container-fluid">
+  <%= form_tag "/resources?id=#{@resource.id}", method: :patch do %>
+    <div class="form-group">
+      <%= label_tag :title, "Title" %>
+      <div class="width 100%">
+      <%= text_field_tag :title, @resource.title %>
+      </div>
+    </div>
 
-  <%= label_tag :category, "Category" %>
-  <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true %>
+    <div class="form-group">
+      <%= label_tag :link, "URL" %>
+      <div class="width 100%">
+      <%= text_field_tag :link, @resource.link %>
+      </div>
+    </div>
 
-  <%= label_tag :source, "Website Name" %>
-  <%= text_field_tag :source, @resource.source %>
+    <div class="form-group">
+      <%= label_tag :category, "Category" %>
+      <div class="width 100%">
+      <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true %>
+      </div>
+    </div>
 
-  <%= label_tag :project, "Related Project (if applicable)" %>
-  <%= text_field_tag :project, @resource.project %>
+    <div class="form-group">
+      <%= label_tag :source, "Website Name" %>
+      <div class="width 100%">
+      <%= text_field_tag :source, @resource.source %>
+      </div>
+    </div>
 
-  <%= submit_tag "Edit Your Findings" %>
-<% end %>
+    <div class="form-group">
+      <%= label_tag :project, "Related Project (if applicable)" %>
+      <div class="width 100%">
+      <%= text_field_tag :project, @resource.project %>
+      </div>
+    </div>
+      <%= submit_tag "Edit Your Findings", class: 'btn btn-success btn-lg' %>
+  <% end %>
+</section>

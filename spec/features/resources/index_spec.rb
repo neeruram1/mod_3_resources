@@ -17,10 +17,9 @@ RSpec.describe 'Resource index page' do
     click_on 'Submit Your Findings'
 
     expect(current_path).to eq('/resources')
-    expect(page).to have_content("Resource Index")
+    expect(page).to have_content("Index")
     expect(page).to have_content("Thanks for being resourceful!")
-    expect(page).to have_content("#{title}")
-    expect(page).to have_content("#{url}")
+    expect(page).to have_link("#{title}")
     expect(page).to have_content("#{category}")
     expect(page).to have_content("#{website}")
   end
