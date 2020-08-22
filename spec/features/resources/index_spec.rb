@@ -67,6 +67,8 @@ RSpec.describe 'Resource index page' do
 
     visit '/resources'
 
+    save_and_open_page
+
     within '.project-related' do
       expect(page).to have_content(project_related.title)
     end
