@@ -4,20 +4,20 @@
 
 <section>
   <h3>Add a Resource</h3>
-  <%= form_tag "/resource/new", method: :get do %>
-    <%= label_tag "Title" %>
+  <%= form_tag "/resources", method: :post do %>
+    <%= label_tag :title, "Title" %>
     <%= text_field_tag :title %>
 
-    <%= label_tag "Url" %>
+    <%= label_tag :link, "URL" %>
     <%= text_field_tag :link %>
 
-    <%= label_tag "Category" %>
+    <%= label_tag :category, "Category" %>
     <%= text_field_tag :category %>
 
-    <%= label_tag "Website Name" %>
+    <%= label_tag :source, "Website Name" %>
     <%= text_field_tag :source %>
 
-    <%= label_tag "Related Project (if applicable)" %>
+    <%= label_tag :project, "Related Project (if applicable)" %>
     <%= text_field_tag :project %>
 
     <%= submit_tag "Submit Your Findings" %>

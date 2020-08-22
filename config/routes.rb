@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :resource
+  get '/resources', to: 'resources#index'
+  post '/resources', to: 'resources#create'
   root 'welcome#index'
 end
