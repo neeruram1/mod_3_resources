@@ -1,10 +1,88 @@
 <h1>Resource Index</h1>
-<section>
-<% @resources.each do |resource| %>
-  <p><%= resource.title %>
-  <p><%= resource.link %>
-  <p><%= resource.source %>
-  <p><%= resource.category %>
-  <p><%= resource.project %>
-<% end %>
-</section>
+ <section class='project-related'>
+   <h4>Project Related</h4>
+   <% project_related_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='official-docs'>
+   <h4>Official Documentation</h4>
+   <% official_docs_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='tools'>
+   <h4>Tools</h4>
+   <% tools_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='misc'>
+   <h4>Miscellaneous</h4>
+   <% misc_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='rails'>
+   <h4>Rails</h4>
+   <% rails_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='ruby'>
+   <h4>Ruby</h4>
+   <% ruby_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='apis'>
+   <h4>APIs</h4>
+   <% apis_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+   <% end %>
+ </section>
+
+ <section class='active-record'>
+   <h4>Active Record</h4>
+   <% active_record_category(@resources).each do |resource| %>
+     <p><%= resource.title %>
+     <p><%= resource.link %>
+     <p><%= resource.source %>
+     <p><%= resource.category %>
+     <p><%= resource.project %>
+    <% end %>
+ </section>
