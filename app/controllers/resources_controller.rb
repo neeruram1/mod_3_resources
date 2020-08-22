@@ -22,6 +22,22 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def edit
+    @resource = Resource.find(params[:id])
+  end
+
+  def update
+    @resource = Resource.find(params[:id])
+
+    if @resource = Resource.update(resource_params)
+      redirect_to '/resources'
+      flash[:message] = "You've updated your resource!"
+    else
+      redirect_to '/'
+      flash[:error] = @resource.errors.full_messages.to_sentence
+    end
+  end
+
   private
 
   def resource_params

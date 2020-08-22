@@ -4,5 +4,6 @@
   <p><%= resource.source %>
   <p><%= resource.category %>
   <p><%= resource.project %>
+    <%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get %>
   <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete %>
  </section>

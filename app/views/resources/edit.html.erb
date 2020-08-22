@@ -1,0 +1,19 @@
+<h3>Add a Resource</h3>
+<%= form_tag "/resources?id=#{@resource.id}", method: :patch do %>
+  <%= label_tag :title, "Title" %>
+  <%= text_field_tag :title , @resource.title %>
+
+  <%= label_tag :link, "URL" %>
+  <%= text_field_tag :link, @resource.link %>
+
+  <%= label_tag :category, "Category" %>
+  <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true %>
+
+  <%= label_tag :source, "Website Name" %>
+  <%= text_field_tag :source, @resource.source %>
+
+  <%= label_tag :project, "Related Project (if applicable)" %>
+  <%= text_field_tag :project, @resource.project %>
+
+  <%= submit_tag "Edit Your Findings" %>
+<% end %>
