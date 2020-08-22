@@ -3,7 +3,11 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
   end
 
-  def show
+  def destroy
+    resource = Resource.find(params[:id])
+    resource.destroy
+    redirect_to '/resources'
+    flash[:message] = "Resource has been removed. Byeeee"
   end
 
   def create
@@ -15,6 +19,22 @@ class ResourcesController < ApplicationController
     else
       redirect_to '/'
       flash[:error] = resource.errors.full_messages.to_sentence
+    end
+  end
+
+  def edit
+    @resource = Resource.find(params[:id])
+  end
+
+  def update
+    @resource = Resource.find(params[:id])
+
+    if @resource = Resource.update(resource_params)
+      redirect_to '/resources'
+      flash[:message] = "You've updated your resource!"
+    else
+      redirect_to '/'
+      flash[:error] = @resource.errors.full_messages.to_sentence
     end
   end
 
