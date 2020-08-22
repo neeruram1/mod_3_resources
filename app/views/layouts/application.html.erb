@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Home', '/' %>
+      <%= link_to 'Resources', '/resources' %>
+    </nav>
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
