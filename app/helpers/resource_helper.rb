@@ -34,4 +34,12 @@ module ResourceHelper
   def testing_category(resources)
     resources.find_all {|resource| resource.category == 'Testing'}
   end
+
+  def has_project?(resource)
+    resource.project.empty? == false
+  end
+
+  def has_description?(resource)
+    resource.description != "" && resource.description.nil? == false
+  end
 end

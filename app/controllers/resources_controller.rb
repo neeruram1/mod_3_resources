@@ -34,7 +34,7 @@ class ResourcesController < ApplicationController
       redirect_to '/resources'
       flash[:message] = "You've updated your resource!"
     else
-      redirect_to '/'
+      redirect_to "/resources/#{resource.id}/edit"
       flash[:error] = resource.errors.full_messages.to_sentence
     end
   end
@@ -42,6 +42,6 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.permit(:title, :link, :category, :source, :project)
+    params.permit(:title, :link, :category, :source, :project, :description)
   end
 end

@@ -1,164 +1,65 @@
-<h2 class='text-info'>Index</h2>
-<br>
+<h2 class='text-info'>Index</h2><hr>
 
  <section id='project-related'>
-   <h4 class="text-info"><u>Project Related</u></h4>
-   <br>
+   <h4 class="text-info">Project Related</h4><hr>
    <% project_related_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='official-docs'>
-   <h4 class="text-info"><u>Official Documentation</u></h4>
-   <br>
+   <h4 class="text-info">Official Documentation</h4><hr>
    <% official_docs_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
-   <br>
+   <hr>
  </section>
 
  <section id='tools'>
-   <h4 class="text-info"><u>Tools</u></h4>
-   <br>
+   <h4 class="text-info">Tools</h4><hr>
    <% tools_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='rails'>
-   <h4 class="text-info"><u>Rails</u></h4>
-   <br>
+   <h4 class="text-info">Rails</h4><hr>
    <% rails_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='ruby'>
-   <h4 class="text-info"><u>Ruby</u></h4>
-   <br>
+   <h4 class="text-info">Ruby</h4><hr>
    <% ruby_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='apis'>
-   <h4 class="text-info"><u>APIs</u></h4>
-   <br>
+   <h4 class="text-info">APIs</h4><hr>
    <% apis_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='active-record'>
-   <h4 class="text-info"><u>ActiveRecord</u></h4>
-   <br>
+   <h4 class="text-info">ActiveRecord</h4><hr>
    <% active_record_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='testing'>
-   <h4 class="text-info"><u>Testing</u></h4>
-   <br>
+   <h4 class="text-info">Testing</h4><hr>
    <% testing_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-   <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+   <% end %><hr>
  </section>
 
  <section id='misc'>
-   <h4 class="text-info"><u>Miscellaneous</u></h4>
-   <br>
+   <h4 class="text-info">Miscellaneous</h4><hr>
    <% misc_category(@resources).each do |resource| %>
-   <section id="resource-<%= resource.id %>">
-     <p><b>Link:</b> <%= link_to "#{resource.title}", resource.link %>
-     <p><b>Website:</b> <%= resource.source %>
-     <p><b>Category:</b> <%= resource.category %>
-       <% if resource.project.empty? == false %>
-         <p><b>Related Project (if applicable):</b> <%= resource.project %>
-       <% end %>
-     <p><%= link_to 'Edit Resource', "/resources/#{resource.id}/edit", method: :get, class: 'btn btn-info btn-xs' %>
-     <%= link_to 'Delete Resource', "/resources/#{resource.id}", method: :delete, class: 'btn btn-info btn-xs' %>
-    </section>
-    <% end %>
-   <br>
+   <%= render :partial => "attributes", :locals => { :resource => resource} %>
+    <% end %><hr>
  </section>
