@@ -1,0 +1,10 @@
+<h1>Resource Index</h1>
+<section>
+<% @resources.each do |resource| %>
+  <p><%= resource.title %>
+  <p><%= resource.link %>
+  <p><%= resource.source %>
+  <p><%= resource.category %>
+  <p><%= resource.project %>
+<% end %>
+</section>

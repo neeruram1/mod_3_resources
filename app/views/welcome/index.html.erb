@@ -1,3 +1,25 @@
-<h1>Mod 3 Resources</h1>
+<h1>Resourcefulness</h1>
 
 <h2>A site for current Turing Mod 3 students to catalog helpful articles and resources</h2>
+
+<section>
+  <h3>Add a Resource</h3>
+  <%= form_tag "/resources", method: :post do %>
+    <%= label_tag :title, "Title" %>
+    <%= text_field_tag :title %>
+
+    <%= label_tag :link, "URL" %>
+    <%= text_field_tag :link %>
+
+    <%= label_tag :category, "Category" %>
+    <%= text_field_tag :category %>
+
+    <%= label_tag :source, "Website Name" %>
+    <%= text_field_tag :source %>
+
+    <%= label_tag :project, "Related Project (if applicable)" %>
+    <%= text_field_tag :project %>
+
+    <%= submit_tag "Submit Your Findings" %>
+  <% end %>
+</section>
