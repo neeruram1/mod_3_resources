@@ -27,14 +27,15 @@ class ResourcesController < ApplicationController
   end
 
   def update
-    @resource = Resource.find(params[:id])
+    resource = Resource.find(params[:id])
+    resource.update(resource_params)
 
-    if @resource = Resource.update(resource_params)
+    if resource.save
       redirect_to '/resources'
       flash[:message] = "You've updated your resource!"
     else
       redirect_to '/'
-      flash[:error] = @resource.errors.full_messages.to_sentence
+      flash[:error] = resource.errors.full_messages.to_sentence
     end
   end
 
