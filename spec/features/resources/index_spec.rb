@@ -52,7 +52,7 @@ RSpec.describe 'Resource index page' do
     click_on 'Submit Your Findings'
 
     expect(current_path).to eq('/')
-    expect(page).to have_content("Title can't be blank, Link can't be blank, Category can't be blank, and Source can't be blank")
+    expect(page).to have_content("Title is required, Link is required, Category is required, and Source is required")
   end
 
   it "Groups resources by category" do
@@ -66,8 +66,6 @@ RSpec.describe 'Resource index page' do
     active_record = Resource.create(title: 'active record', link: 'link', category: 'ActiveRecord', source: 'source', project: 'project')
 
     visit '/resources'
-
-    save_and_open_page
 
     within '.project-related' do
       expect(page).to have_content(project_related.title)
