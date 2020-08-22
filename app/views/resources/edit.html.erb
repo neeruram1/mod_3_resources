@@ -1,7 +1,7 @@
 <h2 class='text-info'>Edit a Resource</h2>
 
 <section class="container-fluid">
-  <%= form_tag "/resources?id=#{@resource.id}", method: :patch do %>
+  <%= form_tag "/resources?id=#{@resource.id}", method: :put do %>
     <div class="form-group">
       <%= label_tag :title, "Title" %>
       <div class="width 100%">
