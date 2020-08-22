@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mod3Resources</title>
+    <title>Resourceful</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,13 +10,24 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'Home', '/' %>
-      <%= link_to 'Resources', '/resources' %>
-    </nav>
-    <% flash.each do |type, message| %>
-      <p><%= message %></p>
-    <% end %>
-    <%= yield %>
-  </body>
+    <%= render 'shared/navigation' %>
+
+
+  <div id="main-container" class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <h3 class='text-info'>Resourceful
+          <small class="text-muted">A site for current Turing Mod 3 students to catalog helpful articles and resources</small>
+        </h3>
+        <% flash.each do |type, message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+      <div class="col-xs-9">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>

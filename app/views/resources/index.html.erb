@@ -1,56 +1,74 @@
-<h1>Resource Index</h1>
+<h2 class='text-info'>Index</h2>
+<br>
+
  <section class='project-related'>
-   <h4>Project Related</h4>
+   <h3 class="text-info"><u>Project Related</u></h3>
+   <br>
    <% project_related_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='official-docs'>
-   <h4>Official Documentation</h4>
+   <h3 class="text-info"><u>Official Documentation</u></h3>
+   <br>
    <% official_docs_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='tools'>
-   <h4>Tools</h4>
+   <h3 class="text-info"><u>Tools</u></h3>
+   <br>
    <% tools_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='misc'>
-   <h4>Miscellaneous</h4>
+   <h3 class="text-info"><u>Miscellaneous</u></h3>
+   <br>
    <% misc_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='rails'>
-   <h4>Rails</h4>
+   <h3 class="text-info"><u>Rails</u></h3>
+   <br>
    <% rails_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='ruby'>
-   <h4>Ruby</h4>
+   <h3 class="text-info"><u>Ruby</u></h3>
+   <br>
    <% ruby_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='apis'>
-   <h4>APIs</h4>
+   <h3 class="text-info"><u>APIs</u></h3>
+   <br>
    <% apis_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>
 
  <section class='active-record'>
-   <h4>ActiveRecord</h4>
+   <h3 class="text-info"><u>ActiveRecord</u></h3>
+   <br>
    <% active_record_category(@resources).each do |resource| %>
    <%= render :partial => "attributes", :locals => { :resource => resource} %>
    <% end %>
+   <br>
  </section>

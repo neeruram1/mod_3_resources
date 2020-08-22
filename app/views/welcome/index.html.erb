@@ -1,25 +1,41 @@
-<h1>Resourcefulness</h1>
+<section class="container-fluid">
+  <h2 class='text-info'>Add a Resource</h2>
 
-<h2>A site for current Turing Mod 3 students to catalog helpful articles and resources</h2>
-
-<section>
-  <h3>Add a Resource</h3>
   <%= form_tag "/resources", method: :post do %>
-    <%= label_tag :title, "Title" %>
-    <%= text_field_tag :title %>
+    <div class="form-group">
+      <%= label_tag :title, "Title" %>
+      <div class="width 100%">
+      <%= text_field_tag :title %>
+      </div>
+    </div>
 
-    <%= label_tag :link, "URL" %>
-    <%= text_field_tag :link %>
+    <div class="form-group">
+      <%= label_tag :link, "URL" %>
+      <div class="width 100%">
+      <%= text_field_tag :link %>
+      </div>
+    </div>
 
-    <%= label_tag :category, "Category" %>
-    <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true  %>
+    <div class="form-group">
+      <%= label_tag :category, "Category" %>
+      <div class="width 100%">
+      <%= select_tag :category, raw("<option>Official Documentation</option><option>Project Related</option><option>Tools</option><option>Miscellaneous</option><option>Rails</option><option>Ruby</option><option>APIs</option><option>ActiveRecord</option>".html_safe), include_blank: true  %>
+      </div>
+    </div>
 
-    <%= label_tag :source, "Website Name" %>
-    <%= text_field_tag :source %>
+    <div class="form-group">
+      <%= label_tag :source, "Website Name" %>
+      <div class="width 100%">
+      <%= text_field_tag :source %>
+      </div>
+    </div>
 
-    <%= label_tag :project, "Related Project (if applicable)" %>
-    <%= text_field_tag :project %>
-
-    <%= submit_tag "Submit Your Findings" %>
+    <div class="form-group">
+      <%= label_tag :project, "Related Project (if applicable)" %>
+      <div class="width 100%">
+      <%= text_field_tag :project %>
+      </div>
+    </div>
+      <%= submit_tag "Submit Your Findings", class: 'btn btn-success btn-lg' %>
   <% end %>
 </section>

@@ -6,7 +6,7 @@ RSpec.describe 'Welcome Page' do
 
     welcome_message = "A site for current Turing Mod 3 students to catalog helpful articles and resources"
 
-    expect(page).to have_content("Resourcefulness")
+    expect(page).to have_content("Resourceful")
     expect(page).to have_content(welcome_message)
   end
 
