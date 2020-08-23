@@ -1,24 +1,25 @@
-# README
+# Resourceful
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A site for current Turing Mod 3 students to catalog helpful articles and resources.
 
-Things you may want to cover:
+## [Add a Resource](https://evening-brook-82616.herokuapp.com/)
+## [Resource Index](https://evening-brook-82616.herokuapp.com/resources)
 
-* Ruby version
+### Find Resources by Categories
 
-* System dependencies
+- Project Related
+- Official Documentation
+- Tools
+- Rails
+- Ruby
+- APIs
+- ActiveRecord
+- Testing
+- Miscellaneous
 
-* Configuration
+### Ways to Contribute
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app is Open Source Software.
+You can contribute by:
+- [Adding resources](https://evening-brook-82616.herokuapp.com/)) the index
+- Developing the codebase by submitting issues tickets and pull requests 
