@@ -21,5 +21,5 @@ A site for current Turing Mod 3 students to catalog helpful articles and resourc
 
 This app is Open Source Software.
 You can contribute by:
-- [Adding resources](https://evening-brook-82616.herokuapp.com/)) the index
+- [Adding resources](https://evening-brook-82616.herokuapp.com/)) to the index
 - Developing the codebase by submitting issues tickets and pull requests 
